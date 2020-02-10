@@ -29,4 +29,11 @@ public class PrinterTest {
         assertEquals(5, printer.getSheets());
     }
 
+    @Test
+    public void printing_reduces_toner_by_1() {
+        printer.print(1, 1);
+        printer.print(2, 1);
+        assertEquals(7, printer.getToner());
+    }
+
 }
