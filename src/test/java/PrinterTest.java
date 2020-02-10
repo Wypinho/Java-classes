@@ -23,4 +23,10 @@ public class PrinterTest {
         assertEquals(3, printer.getSheets());
     }
 
+    @Test
+    public void only_prints_if_enough_sheets_remaining() {
+        printer.print(3, 4);
+        assertEquals(5, printer.getSheets());
+    }
+
 }
