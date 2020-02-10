@@ -8,4 +8,10 @@ public class Printer {
     public int getSheets() {
         return this.sheets;
     }
+
+    public void print(int pages, int copies) {
+        if (this.sheets > pages * copies) {
+            this.sheets -= pages * copies;
+        }
+    }
 }
